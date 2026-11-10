@@ -1,0 +1,1242 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TecnoFácil | Sostenibilidad y ODS</title>
+
+<style>
+:root {
+    --azul: #1769aa;
+    --azul-oscuro: #104675;
+    --verde: #20a889;
+    --fondo: #f4f8fc;
+    --texto: #293b49;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+header {
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #00000012;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--azul);
+}
+
+.logo span {
+    color: var(--verde);
+}
+
+nav {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--verde);
+}
+
+section {
+    padding: 75px 8%;
+    scroll-margin-top: 90px;
+}
+
+h2 {
+    color: var(--azul-oscuro);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: var(--azul);
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: #657583;
+}
+
+.hero {
+    min-height: 480px;
+    background: linear-gradient(120deg, #104675, #1769aa, #20a889);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 8%;
+}
+
+.hero-contenido {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 28px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: var(--verde);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: var(--azul-oscuro);
+    transform: translateY(-3px);
+}
+
+.contenedor {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #0000000c;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.icono {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.intro {
+    background: white;
+}
+
+.intro-texto {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* MOTIVACIONES */
+
+.motivaciones {
+    background: #eaf6f2;
+}
+
+.motivaciones .tarjeta {
+    text-align: center;
+}
+
+.motivacion-final {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+    border-left: 5px solid var(--verde);
+}
+
+.motivacion-final p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ODS */
+
+.ods {
+    background: #f4f8fc;
+}
+
+.ods-card {
+    overflow: hidden;
+    padding: 0;
+}
+
+.ods-color {
+    padding: 22px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.ods-4 {
+    background: #c5192d;
+}
+
+.ods-9 {
+    background: #fd6925;
+}
+
+.ods-10 {
+    background: #dd1367;
+}
+
+.ods-contenido {
+    padding: 23px;
+}
+
+.ods-contenido h3 {
+    color: var(--azul-oscuro);
+}
+
+.ods-contenido p {
+    margin-bottom: 12px;
+}
+
+.accion {
+    background: #e8f6f0;
+    padding: 14px;
+    border-radius: 9px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* MODELO CANVAS */
+
+.canvas {
+    background: white;
+}
+
+.canvas-intro {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.canvas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.canvas-bloque {
+    background: #f0f7fb;
+    border-top: 5px solid var(--azul);
+    padding: 18px;
+    border-radius: 10px;
+    min-height: 210px;
+}
+
+.canvas-bloque h3 {
+    font-size: 17px;
+}
+
+.canvas-bloque p {
+    font-size: 14px;
+}
+
+.canvas-bloque ul {
+    padding-left: 18px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.canvas-bloque li {
+    margin-bottom: 6px;
+}
+
+.canvas-bloque.destacado {
+    background: #e8f6f0;
+    border-color: var(--verde);
+}
+
+.canvas-bloque.finanzas {
+    background: #fff7e9;
+    border-color: #e7a93b;
+}
+
+.canvas-bloque.sostenibilidad {
+    background: #edf5ed;
+    border-color: #4c9b62;
+}
+
+.canvas-leyenda {
+    text-align: center;
+    margin-top: 20px;
+    color: #687987;
+    font-size: 13px;
+}
+
+/* TRES PILARES */
+
+.sostenibilidad {
+    background: #eaf6f2;
+}
+
+.pilar {
+    border-top: 5px solid var(--verde);
+}
+
+.pilar.economico {
+    border-color: #e5a52e;
+}
+
+.pilar.social {
+    border-color: var(--azul);
+}
+
+.pilar.ambiental {
+    border-color: #4c9b62;
+}
+
+/* COMPROMISOS */
+
+.compromisos {
+    background: white;
+}
+
+.compromiso-lista {
+    max-width: 850px;
+    margin: auto;
+}
+
+.compromiso {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    background: #f4f8fc;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+
+.compromiso-icono {
+    font-size: 27px;
+}
+
+.compromiso h3 {
+    margin-bottom: 4px;
+}
+
+/* IMPACTO */
+
+.impacto {
+    background: linear-gradient(120deg, #1769aa, #20a889);
+    color: white;
+    text-align: center;
+}
+
+.impacto h2 {
+    color: white;
+}
+
+.impacto .subtitulo {
+    color: white;
+}
+
+.impacto .tarjeta {
+    color: var(--texto);
+    text-align: left;
+}
+
+/* CONTACTO */
+
+.contacto {
+    background: white;
+}
+
+.contacto-contenido {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+}
+
+.contacto a {
+    color: var(--azul);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* FUENTES */
+
+.fuentes {
+    background: #f0f4f7;
+    padding: 30px 8%;
+    text-align: center;
+}
+
+.fuentes a {
+    display: inline-block;
+    margin: 8px;
+    color: var(--azul);
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: var(--azul-oscuro);
+    color: white;
+    text-align: center;
+    padding: 28px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MÓVILES */
+
+@media (max-width: 950px) {
+    .canvas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+
+    .canvas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .canvas-bloque {
+        min-height: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENÚ -->
+
+<header>
+    <div class="logo">Tecno<span>Fácil</span></div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#motivaciones">Motivaciones</a>
+        <a href="#ods">ODS</a>
+        <a href="#canvas">Modelo Canvas</a>
+        <a href="#sostenibilidad">Sostenibilidad</a>
+        <a href="#compromisos">Compromisos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
+    <div class="hero-contenido">
+        <h1>Una tecnología más accesible y sostenible</h1>
+
+        <p>
+            En TecnoFácil trabajamos para reducir la brecha digital,
+            acercar la tecnología a todas las personas y contribuir
+            a un futuro más justo y sostenible.
+        </p>
+
+        <a href="#ods" class="boton">
+            Conoce nuestros compromisos
+        </a>
+    </div>
+</section>
+
+<!-- INTRODUCCIÓN -->
+
+<section class="intro">
+    <div class="contenedor">
+
+        <h2>Nuestro compromiso con la sostenibilidad</h2>
+
+        <p class="intro-texto">
+            TecnoFácil es un proyecto de formación tecnológica dirigido
+            principalmente a personas mayores y a personas que tienen
+            dificultades para utilizar móviles, ordenadores e Internet.
+
+            Queremos que todo el mundo pueda aprender y aprovechar
+            las ventajas de la tecnología, sin importar su edad o sus
+            conocimientos.
+
+            Además, buscamos desarrollar nuestra actividad de manera
+            responsable, cuidando el medioambiente y ofreciendo
+            oportunidades de aprendizaje a precios asequibles.
+        </p>
+
+    </div>
+</section>
+
+<!-- MOTIVACIONES -->
+
+<section class="motivaciones" id="motivaciones">
+    <div class="contenedor">
+
+        <h2>¿Por qué queremos hacer este proyecto?</h2>
+
+        <p class="subtitulo">
+            Somos Francisco, Marco y Daiana. Tenemos ganas de desarrollar
+            TecnoFácil porque creemos que la tecnología debería estar
+            al alcance de todas las personas. Estas son nuestras
+            motivaciones para sacar adelante el proyecto.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="tarjeta">
+                <div class="icono">🙋‍♂️</div>
+
+                <h3>Francisco</h3>
+
+                <p>
+                    Mi motivación es ayudar a las personas que tienen
+                    dificultades con la tecnología. Me gustaría que
+                    pudieran utilizar móviles y ordenadores con más
+                    confianza y sin depender siempre de otras personas.
+                    También quiero aprender a trabajar en equipo y
+                    participar en la creación de una empresa.
+                </p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="icono">💡</div>
+
+                <h3>Marco</h3>
+
+                <p>
+                    Me motiva aprender a crear y desarrollar un proyecto
+                    propio, poniendo en práctica nuestros conocimientos.
+                    También quiero contribuir a que la tecnología sea
+                    más fácil y accesible para todo el mundo y ayudar
+                    a las personas que necesitan aprender desde cero.
+                </p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="icono">🤝</div>
+
+                <h3>Daiana</h3>
+
+                <p>
+                    Mi motivación es poder ayudar especialmente a las
+                    personas mayores, que muchas veces se sienten
+                    perdidas al utilizar la tecnología. Quiero que
+                    aprendan con paciencia, confianza y sin miedo
+                    a equivocarse. También me hace ilusión crear
+                    un proyecto útil que pueda mejorar la vida de
+                    otras personas.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="motivacion-final">
+            <h3>Una meta que compartimos</h3>
+
+            <p>
+                Los tres queremos que TecnoFácil sea un proyecto
+                cercano, útil y sostenible. Nuestra ilusión es
+                conseguir que más personas puedan aprovechar
+                la tecnología, mejorar su autonomía y tener
+                las mismas oportunidades digitales.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- OBJETIVOS DE DESARROLLO SOSTENIBLE -->
+
+<section class="ods" id="ods">
+    <div class="contenedor">
+
+        <h2>Objetivos de Desarrollo Sostenible</h2>
+
+        <p class="subtitulo">
+            Los ODS forman parte de la Agenda 2030 de Naciones Unidas.
+            TecnoFácil contribuye especialmente a tres objetivos
+            relacionados con la educación, la tecnología y la igualdad.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="tarjeta ods-card">
+
+                <div class="ods-color ods-4">
+                    ODS 4
+                </div>
+
+                <div class="ods-contenido">
+
+                    <h3>Educación de calidad</h3>
+
+                    <p>
+                        Queremos facilitar el aprendizaje de la tecnología
+                        a personas de diferentes edades y niveles.
+                    </p>
+
+                    <p>
+                        Enseñamos a utilizar móviles, ordenadores,
+                        aplicaciones e Internet con explicaciones
+                        sencillas y prácticas.
+                    </p>
+
+                    <div class="accion">
+                        <strong>Nuestro compromiso:</strong>
+
+                        <p>
+                            Ofrecer clases personalizadas, talleres
+                            y guías sencillas para que las personas
+                            puedan seguir aprendiendo.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="tarjeta ods-card">
+
+                <div class="ods-color ods-9">
+                    ODS 9
+                </div>
+
+                <div class="ods-contenido">
+
+                    <h3>Industria, innovación e infraestructuras</h3>
+
+                    <p>
+                        Acercamos las nuevas tecnologías a personas
+                        que no están acostumbradas a utilizarlas.
+                    </p>
+
+                    <p>
+                        Queremos que puedan aprovechar las herramientas
+                        digitales y participar en una sociedad cada vez
+                        más tecnológica.
+                    </p>
+
+                    <div class="accion">
+                        <strong>Nuestro compromiso:</strong>
+
+                        <p>
+                            Enseñar a utilizar aplicaciones, servicios
+                            digitales y dispositivos de forma sencilla
+                            y responsable.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="tarjeta ods-card">
+
+                <div class="ods-color ods-10">
+                    ODS 10
+                </div>
+
+                <div class="ods-contenido">
+
+                    <h3>Reducción de las desigualdades</h3>
+
+                    <p>
+                        Queremos reducir la brecha digital para que
+                        ninguna persona se quede atrás por no saber
+                        utilizar la tecnología.
+                    </p>
+
+                    <p>
+                        Prestamos especial atención a las personas
+                        mayores y a quienes tienen menos conocimientos
+                        tecnológicos.
+                    </p>
+
+                    <div class="accion">
+                        <strong>Nuestro compromiso:</strong>
+
+                        <p>
+                            Adaptar las clases a cada persona,
+                            ofrecer precios asequibles y dar
+                            la posibilidad de aprender desde casa.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- MODELO CANVAS -->
+
+<section class="canvas" id="canvas">
+    <div class="contenedor">
+
+        <h2>Modelo Canvas sostenible</h2>
+
+        <p class="canvas-intro">
+            El modelo Canvas nos permite explicar cómo funciona
+            TecnoFácil, a quién ayuda, qué ofrece y cómo consigue
+            mantener su actividad. También tenemos en cuenta
+            el impacto social y medioambiental de la empresa.
+        </p>
+
+        <div class="canvas-grid">
+
+            <article class="canvas-bloque">
+                <h3>1. Socios clave</h3>
+
+                <p>Personas y organizaciones que pueden colaborar con nosotros.</p>
+
+                <ul>
+                    <li>Asociaciones de mayores.</li>
+                    <li>Centros de día.</li>
+                    <li>Ayuntamiento.</li>
+                    <li>Proveedores tecnológicos.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque">
+                <h3>2. Actividades clave</h3>
+
+                <p>Las tareas necesarias para ofrecer nuestro servicio.</p>
+
+                <ul>
+                    <li>Clases de informática.</li>
+                    <li>Talleres tecnológicos.</li>
+                    <li>Guías y tutoriales.</li>
+                    <li>Ayuda personalizada.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque">
+                <h3>3. Recursos clave</h3>
+
+                <p>Los medios que necesitamos para trabajar.</p>
+
+                <ul>
+                    <li>Ordenadores y móviles.</li>
+                    <li>Conexión a Internet.</li>
+                    <li>Material didáctico.</li>
+                    <li>Conocimientos tecnológicos.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque destacado">
+                <h3>4. Propuesta de valor</h3>
+
+                <p>Lo que nos diferencia de otras opciones.</p>
+
+                <ul>
+                    <li>Enseñanza sencilla.</li>
+                    <li>Paciencia y cercanía.</li>
+                    <li>Clases adaptadas a cada persona.</li>
+                    <li>Reducción de la brecha digital.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque">
+                <h3>5. Relación con clientes</h3>
+
+                <p>Cómo tratamos y acompañamos a nuestros alumnos.</p>
+
+                <ul>
+                    <li>Atención personalizada.</li>
+                    <li>Trato cercano y amable.</li>
+                    <li>Seguimiento del aprendizaje.</li>
+                    <li>Ayuda para resolver dudas.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque">
+                <h3>6. Canales</h3>
+
+                <p>Medios para llegar a nuestros clientes.</p>
+
+                <ul>
+                    <li>Página web.</li>
+                    <li>Instagram.</li>
+                    <li>WhatsApp.</li>
+                    <li>Carteles y folletos.</li>
+                    <li>Clases a domicilio.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque">
+                <h3>7. Segmentos de clientes</h3>
+
+                <p>Personas a las que dirigimos nuestros servicios.</p>
+
+                <ul>
+                    <li>Personas mayores.</li>
+                    <li>Adultos con poca experiencia digital.</li>
+                    <li>Familiares que buscan ayuda para sus mayores.</li>
+                    <li>Personas que quieren mejorar sus conocimientos.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque finanzas">
+                <h3>8. Estructura de costes</h3>
+
+                <p>Gastos necesarios para mantener el proyecto.</p>
+
+                <ul>
+                    <li>Material informático.</li>
+                    <li>Internet y electricidad.</li>
+                    <li>Transporte.</li>
+                    <li>Publicidad.</li>
+                    <li>Material de formación.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque finanzas">
+                <h3>9. Fuentes de ingresos</h3>
+
+                <p>Cómo conseguimos ingresos para mantener la actividad.</p>
+
+                <ul>
+                    <li>Clases individuales.</li>
+                    <li>Clases a domicilio.</li>
+                    <li>Bonos de varias clases.</li>
+                    <li>Talleres grupales.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque sostenibilidad">
+                <h3>10. Beneficios sociales y ambientales</h3>
+
+                <p>El impacto positivo que queremos conseguir.</p>
+
+                <ul>
+                    <li>Menos brecha digital.</li>
+                    <li>Más autonomía personal.</li>
+                    <li>Menos uso de papel.</li>
+                    <li>Reutilización de dispositivos.</li>
+                    <li>Formación accesible.</li>
+                </ul>
+            </article>
+
+            <article class="canvas-bloque sostenibilidad">
+                <h3>11. Costes sociales y ambientales</h3>
+
+                <p>Impactos negativos que debemos controlar.</p>
+
+                <ul>
+                    <li>Consumo de electricidad.</li>
+                    <li>Desplazamientos a domicilio.</li>
+                    <li>Uso de dispositivos electrónicos.</li>
+                    <li>Generación de residuos tecnológicos.</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <p class="canvas-leyenda">
+            Nuestro Canvas incluye los nueve bloques del modelo
+            de negocio y dos apartados adicionales para analizar
+            su sostenibilidad.
+        </p>
+
+    </div>
+</section>
+
+<!-- TRES PILARES DE LA SOSTENIBILIDAD -->
+
+<section class="sostenibilidad" id="sostenibilidad">
+    <div class="contenedor">
+
+        <h2>Los tres pilares de la sostenibilidad</h2>
+
+        <p class="subtitulo">
+            Para que TecnoFácil sea un proyecto sostenible,
+            debemos cuidar a las personas, mantener una actividad
+            económica viable y respetar el medioambiente.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="tarjeta pilar social">
+
+                <div class="icono">🤝</div>
+
+                <h3>Sostenibilidad social</h3>
+
+                <p>
+                    Queremos que todas las personas tengan oportunidades
+                    para aprender y utilizar la tecnología.
+                </p>
+
+                <ul>
+                    <li>Reducir la brecha digital.</li>
+                    <li>Ayudar especialmente a las personas mayores.</li>
+                    <li>Ofrecer atención personalizada.</li>
+                    <li>Facilitar el acceso a la formación.</li>
+                </ul>
+
+            </article>
+
+            <article class="tarjeta pilar economico">
+
+                <div class="icono">💶</div>
+
+                <h3>Sostenibilidad económica</h3>
+
+                <p>
+                    Buscamos mantener el negocio a largo plazo
+                    sin dejar de ofrecer un servicio accesible.
+                </p>
+
+                <ul>
+                    <li>Precios asequibles.</li>
+                    <li>Controlar los gastos.</li>
+                    <li>Ofrecer diferentes bonos.</li>
+                    <li>Conseguir clientes y mantener el proyecto.</li>
+                </ul>
+
+            </article>
+
+            <article class="tarjeta pilar ambiental">
+
+                <div class="icono">🌱</div>
+
+                <h3>Sostenibilidad ambiental</h3>
+
+                <p>
+                    Queremos reducir el impacto de nuestra actividad
+                    sobre el medioambiente.
+                </p>
+
+                <ul>
+                    <li>Reducir el uso de papel.</li>
+                    <li>Ahorrar electricidad.</li>
+                    <li>Reutilizar materiales.</li>
+                    <li>Reciclar los aparatos electrónicos.</li>
+                </ul>
+
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMPROMISOS SOSTENIBLES -->
+
+<section class="compromisos" id="compromisos">
+    <div class="contenedor">
+
+        <h2>Nuestros compromisos sostenibles</h2>
+
+        <p class="subtitulo">
+            Queremos que la sostenibilidad esté presente en nuestro
+            trabajo diario. Por eso nos comprometemos a realizar
+            pequeñas acciones que ayuden a las personas y al planeta.
+        </p>
+
+        <div class="compromiso-lista">
+
+            <div class="compromiso">
+                <div class="compromiso-icono">📄</div>
+
+                <div>
+                    <h3>Reducir el consumo de papel</h3>
+
+                    <p>
+                        Utilizaremos documentos, apuntes y guías digitales
+                        siempre que sea posible para evitar imprimir
+                        innecesariamente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="compromiso">
+                <div class="compromiso-icono">💡</div>
+
+                <div>
+                    <h3>Ahorrar energía</h3>
+
+                    <p>
+                        Apagaremos los ordenadores, pantallas y otros
+                        dispositivos cuando no se estén utilizando.
+                    </p>
+                </div>
+            </div>
+
+            <div class="compromiso">
+                <div class="compromiso-icono">♻️</div>
+
+                <div>
+                    <h3>Reciclar los aparatos electrónicos</h3>
+
+                    <p>
+                        Llevaremos los dispositivos que ya no funcionen
+                        a puntos limpios o lugares autorizados para
+                        gestionar correctamente los residuos electrónicos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="compromiso">
+                <div class="compromiso-icono">🔧</div>
+
+                <div>
+                    <h3>Reutilizar los dispositivos</h3>
+
+                    <p>
+                        Siempre que sea posible, intentaremos reparar,
+                        aprovechar y alargar la vida útil de los
+                        dispositivos electrónicos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="compromiso">
+                <div class="compromiso-icono">🚶</div>
+
+                <div>
+                    <h3>Reducir los desplazamientos</h3>
+
+                    <p>
+                        Organizaremos las clases a domicilio para
+                        aprovechar mejor los desplazamientos y evitar
+                        viajes innecesarios.
+                    </p>
+                </div>
+            </div>
+
+            <div class="compromiso">
+                <div class="compromiso-icono">❤️</div>
+
+                <div>
+                    <h3>Ayudar a todas las personas</h3>
+
+                    <p>
+                        Intentaremos que nuestros servicios sean
+                        accesibles, cercanos y adaptados a las
+                        necesidades de cada alumno.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- IMPACTO POSITIVO -->
+
+<section class="impacto">
+    <div class="contenedor">
+
+        <h2>El impacto que queremos conseguir</h2>
+
+        <p class="subtitulo">
+            Con TecnoFácil queremos conseguir cambios positivos
+            en nuestra comunidad y en el medioambiente.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="tarjeta">
+                <div class="icono">👩‍🏫</div>
+
+                <h3>Más aprendizaje</h3>
+
+                <p>
+                    Que las personas puedan aprender nuevas habilidades
+                    y utilizar la tecnología con mayor seguridad.
+                </p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="icono">🌍</div>
+
+                <h3>Más igualdad</h3>
+
+                <p>
+                    Que todas las personas tengan más oportunidades
+                    de acceder al mundo digital.
+                </p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="icono">🌿</div>
+
+                <h3>Menos impacto ambiental</h3>
+
+                <p>
+                    Que nuestra actividad utilice los recursos
+                    de forma responsable y genere menos residuos.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contacto" id="contacto">
+    <div class="contenedor">
+
+        <h2>Conoce más sobre TecnoFácil</h2>
+
+        <p class="subtitulo">
+            Queremos construir un proyecto que ayude a las personas
+            y contribuya a un futuro más sostenible.
+        </p>
+
+        <div class="contacto-contenido">
+
+            <p>📍 <strong>Ubicación:</strong> C/Rosales Suárez, Umbrete.</p>
+
+            <p>
+                📧 <strong>Email:</strong>
+                <a href="mailto:tecnofacil255@gmail.com">
+                    tecnofacil255@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📞 <strong>WhatsApp:</strong>
+                <a href="https://wa.me/34642239735">
+                    642 23 97 35
+                </a>
+            </p>
+
+            <p>
+                📷 <strong>Instagram:</strong>
+                <a href="https://www.instagram.com/tecnofacil255/"
+                   target="_blank" rel="noopener noreferrer">
+                    @tecnofacil255
+                </a>
+            </p>
+
+            <br>
+
+            <a href="https://www.instagram.com/tecnofacil255/"
+               target="_blank" rel="noopener noreferrer"
+               class="boton">
+                Visita nuestro Instagram
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- FUENTES DE INFORMACIÓN -->
+
+<section class="fuentes">
+    <div class="contenedor">
+
+        <h3>Fuentes de información</h3>
+
+        <p>
+            Para conocer mejor los Objetivos de Desarrollo Sostenible
+            y el cuidado del medioambiente:
+        </p>
+
+        <a href="https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/"
+           target="_blank" rel="noopener noreferrer">
+            Naciones Unidas - ODS
+        </a>
+
+        <a href="https://www.un.org/sustainabledevelopment/es/education/"
+           target="_blank" rel="noopener noreferrer">
+            ODS 4 - Educación
+        </a>
+
+        <a href="https://www.un.org/sustainabledevelopment/es/infrastructure/"
+           target="_blank" rel="noopener noreferrer">
+            ODS 9 - Innovación
+        </a>
+
+        <a href="https://www.un.org/sustainabledevelopment/es/inequality/"
+           target="_blank" rel="noopener noreferrer">
+            ODS 10 - Igualdad
+        </a>
+
+    </div>
+</section>
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+    <h3 style="color:white;">TecnoFácil</h3>
+
+    <p>La tecnología, más fácil para todos.</p>
+
+    <p>Un proyecto educativo, social y sostenible.</p>
+
+    <p>Francisco, Marco y Daiana.</p>
+
+    <p>© 2026 TecnoFácil. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
